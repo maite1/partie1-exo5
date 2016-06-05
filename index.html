@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>exercice javascript 5</title>
+  <meta charset="utf-8" />
+</head>
+<body>
+  <form>
+    <label for="premier_nombre">Premier nombre : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
+    <label for="deuxieme_nombre">Deuxième nombre : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
+    <button  id="valider" name ="valider" onclick="recuperation()">Valider</button>
+  </form>
+  <script>
+  /*Je  tiens à préciser que je vais me suicider mentalement à chaque exo de javascript à partir de maintenant !!!*/
+function recuperation(){
+  var premiernombre = document.getElementById('premier_nombre').value;
+  var deuxiemenombre = document.getElementById('deuxieme_nombre').value;
+   if (isNaN (premiernombre) == true || isNaN (deuxiemenombre) == true){
+     alert('error');
+   }
+   else{
+    premiernombre = parseInt(premiernombre);
+    deuxiemenombre = parseFloat(deuxiemenombre);
+    var result = premiernombre * deuxiemenombre;
+    alert(result);
+   }
+}
+  </script>
+</body>
+</html>
